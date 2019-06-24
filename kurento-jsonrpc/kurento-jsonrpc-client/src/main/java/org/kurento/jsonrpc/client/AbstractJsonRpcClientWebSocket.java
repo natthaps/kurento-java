@@ -607,7 +607,7 @@ public abstract class AbstractJsonRpcClientWebSocket extends JsonRpcClient {
   }
 
   private void reconnect(final String closeReason) {
-    reconnect(closeReason, 0, true);
+    reconnect(closeReason, RECONNECT_DELAY_TIME_MILLIS, true);
   }
 
   private void reconnect(final String closeReason, final long delayMillis,
